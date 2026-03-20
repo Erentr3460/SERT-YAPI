@@ -18,7 +18,7 @@
             --white: #ffffff;
             --text-gray: #71717a;
             --whatsapp: #25d366;
-            --facebook: #1877f2; /* Facebook Kurumsal Mavisi */
+            --facebook: #1877f2;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,7 +38,6 @@
 
         .logo-box {
             background: none;
-            padding: 0; 
             display: flex; align-items: center; gap: 20px;
             transition: transform 0.3s ease;
         }
@@ -48,16 +47,12 @@
         
         .logo-text-group { display: flex; flex-direction: column; justify-content: center; }
         .logo-text-group span.brand-name { 
-            color: var(--white); 
-            font-weight: 900; 
-            font-size: 2.2rem; 
+            color: var(--white); font-weight: 900; font-size: 2.2rem; 
             text-transform: uppercase; letter-spacing: -1px; line-height: 0.9;
         }
 
         .logo-text-group span.brand-slogan { 
-            color: var(--text-gray); 
-            font-weight: 700; 
-            font-size: 0.9rem; 
+            color: var(--text-gray); font-weight: 700; font-size: 0.9rem; 
             margin-top: 6px; letter-spacing: 0.2px; line-height: 1.2; text-transform: uppercase;
         }
 
@@ -74,11 +69,8 @@
         }
         
         .hero .main-title { 
-            font-size: clamp(2.5rem, 8vw, 5rem); 
-            font-weight: 900; 
-            line-height: 1.0; 
-            text-transform: uppercase;
-            letter-spacing: -1px;
+            font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 900; 
+            line-height: 1.0; text-transform: uppercase; letter-spacing: -1px;
         }
 
         .social-links { margin-top: 40px; display: flex; gap: 20px; justify-content: center; align-items: center; }
@@ -93,27 +85,22 @@
 
         .projects-section { padding: 120px 8% 60px; background: var(--surface); }
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-bottom: 25px; }
-        .project-card { position: relative; height: 500px; overflow: hidden; border-radius: 8px; background: #111; }
+        
+        .project-card { position: relative; height: 600px; overflow: hidden; border-radius: 8px; background: #111; }
         .project-number { position: absolute; top: 25px; left: 25px; background: var(--blue); color: white; padding: 10px 25px; font-weight: 900; z-index: 10; border-radius: 4px; letter-spacing: 1px; }
-        .project-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s ease; }
+        
+        .project-card img, .project-card iframe { width: 100%; height: 100%; object-fit: cover; border: none; transition: 0.8s ease; }
         .project-card:hover img { transform: scale(1.1); filter: brightness(0.6); }
 
         .full-width-image {
-            width: 100%;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            overflow: hidden;
-            display: block;
+            width: 100%; margin-bottom: 25px; border-radius: 8px;
+            overflow: hidden; display: block;
         }
         .full-width-image img { width: 100%; height: auto; display: block; object-fit: contain; }
 
         .video-wrapper {
-            width: 100%;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #000;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            width: 100%; margin-bottom: 40px; border-radius: 12px;
+            overflow: hidden; background: #000; box-shadow: 0 25px 60px rgba(0,0,0,0.6);
             border: 1px solid rgba(255,255,255,0.05);
         }
 
@@ -133,10 +120,9 @@
             header { height: 110px; }
             .logo-box img { height: 65px; }
             .logo-text-group span.brand-name { font-size: 1.3rem; }
-            .logo-text-group span.brand-slogan { font-size: 0.6rem; }
             nav { display: none; }
             .hero .main-title { font-size: 3rem; }
-            .project-card { height: 350px; }
+            .project-card { height: 500px; }
         }
     </style>
 </head>
@@ -161,10 +147,7 @@
 
     <section class="hero" id="home">
         <div class="main-title">
-            GÜÇLÜ<br>
-            SAĞLAM<br>
-            GELECEK<br>
-            <span style="color: var(--blue);">İÇİN</span>
+            GÜÇLÜ<br>SAĞLAM<br>GELECEK<br><span style="color: var(--blue);">İÇİN</span>
         </div>
         
         <div class="social-links">
@@ -187,6 +170,18 @@
             <div class="project-card">
                 <div class="project-number">PROJE 03</div>
                 <img src="https://drive.google.com/thumbnail?id=1mXQylrEvOujgjTKujRnBj2Gh01PTxjWQ&sz=w1000" alt="Proje 3">
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://drive.google.com/thumbnail?id=1yDYtPqw2XXpNcQARIGS4FXEkQ5rvfYfH&sz=w1000">
+            </div>
+            <div class="project-card">
+                <iframe src="https://drive.google.com/file/d/1CuMLLHda7pTZVC70UqX7qHx3TtQ_onyo/preview"></iframe>
+            </div>
+            <div class="project-card">
+                <img src="https://drive.google.com/thumbnail?id=1kVEZgh-sG2syIJ0MwnvTmYgbTtj30eCx&sz=w1000">
             </div>
         </div>
 
