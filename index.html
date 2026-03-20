@@ -18,6 +18,7 @@
             --white: #ffffff;
             --text-gray: #71717a;
             --whatsapp: #25d366;
+            --facebook: #1877f2; /* Facebook Kurumsal Mavisi */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,26 +36,18 @@
             z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* LOGO KISMI DÜZELTME */
         .logo-box {
-            /* Beyaz arka planı ve gölgeyi kaldırdık */
             background: none;
             padding: 0; 
-            border-radius: 0;
             display: flex; align-items: center; gap: 20px;
-            box-shadow: none;
             transition: transform 0.3s ease;
         }
         
         .logo-box:hover { transform: scale(1.03); }
-
-        /* Yeni logoya göre boyutu ayarladık */
         .logo-box img { height: 110px; width: auto; object-fit: contain; }
         
         .logo-text-group { display: flex; flex-direction: column; justify-content: center; }
-        
         .logo-text-group span.brand-name { 
-            /* Yazı rengini beyaz yaptık (çünkü arka plan artık koyu) */
             color: var(--white); 
             font-weight: 900; 
             font-size: 2.2rem; 
@@ -62,7 +55,6 @@
         }
 
         .logo-text-group span.brand-slogan { 
-            /* Slogan rengini gri yaptık */
             color: var(--text-gray); 
             font-weight: 700; 
             font-size: 0.9rem; 
@@ -97,6 +89,7 @@
         }
         .social-link.instagram:hover { background: #e1306c; border-color: #e1306c; transform: translateY(-8px); }
         .social-link.whatsapp:hover { background: var(--whatsapp); border-color: var(--whatsapp); transform: translateY(-8px); }
+        .social-link.facebook:hover { background: var(--facebook); border-color: var(--facebook); transform: translateY(-8px); }
 
         .projects-section { padding: 120px 8% 60px; background: var(--surface); }
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-bottom: 25px; }
@@ -112,12 +105,7 @@
             overflow: hidden;
             display: block;
         }
-        .full-width-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-        }
+        .full-width-image img { width: 100%; height: auto; display: block; object-fit: contain; }
 
         .video-wrapper {
             width: 100%;
@@ -129,20 +117,8 @@
             border: 1px solid rgba(255,255,255,0.05);
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
         footer { background: #050505; padding: 100px 8% 40px; border-top: 1px solid #111; }
         .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 60px; margin-bottom: 50px; }
@@ -155,10 +131,9 @@
 
         @media (max-width: 768px) {
             header { height: 110px; }
-            .logo-box { gap: 12px; }
-            .logo-box img { height: 65px; } /* Mobil boyutu ayarlandı */
-            .logo-text-group span.brand-name { font-size: 1.3rem; color: white; }
-            .logo-text-group span.brand-slogan { font-size: 0.6rem; color: var(--text-gray); }
+            .logo-box img { height: 65px; }
+            .logo-text-group span.brand-name { font-size: 1.3rem; }
+            .logo-text-group span.brand-slogan { font-size: 0.6rem; }
             nav { display: none; }
             .hero .main-title { font-size: 3rem; }
             .project-card { height: 350px; }
@@ -194,6 +169,7 @@
         
         <div class="social-links">
             <a href="https://www.instagram.com/sert_yapi_gayrimenkul/" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/SERTYAPIEMLAKVEKONUT?mibextid=wwXIfr" target="_blank" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://wa.me/905325995814" target="_blank" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
         </div>
     </section>
@@ -216,11 +192,7 @@
 
         <div class="video-wrapper">
             <div class="video-container">
-                <iframe 
-                    src="https://drive.google.com/file/d/1c4lmLXgDMXDnIi1hZz8LlczCc3HwOZkT/preview" 
-                    allow="autoplay" 
-                    allowfullscreen>
-                </iframe>
+                <iframe src="https://drive.google.com/file/d/1c4lmLXgDMXDnIi1hZz8LlczCc3HwOZkT/preview" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -245,6 +217,7 @@
                 <h4>TAKİP EDİN</h4>
                 <div class="social-links" style="justify-content: flex-start; margin-top: 10px;">
                     <a href="https://www.instagram.com/sert_yapi_gayrimenkul/" target="_blank" class="social-link instagram" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SERTYAPIEMLAKVEKONUT?mibextid=wwXIfr" target="_blank" class="social-link facebook" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://wa.me/905325995814" target="_blank" class="social-link whatsapp" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
